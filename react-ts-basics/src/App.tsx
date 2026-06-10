@@ -1,9 +1,9 @@
-import CoursGoalList from "./components/CourseGoalList";
+import CourseGoalList from "./components/CourseGoalList";
 import goalsImg from "./assets/goals.jpg";
 import Header from "./components/Header";
 import { useState } from "react";
 import { ListFormat } from "typescript";
-import NewGoal from "./components/CourseGoalList/NewGoal";
+import NewGoal from "./components/NewGoal";
 
 export type CourseGoal = {
   title: string;
@@ -35,7 +35,7 @@ export default function App() {
         <h1>Your Course Goal</h1>
       </Header>
       <NewGoal onAddGoal={handleAddGoal} />
-      <CoursGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
+      <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
     </main>
   );
 }
